@@ -13,6 +13,7 @@ content = `
         <h1>My first name is Charlie</h1>
         <h2>My second name is van Beck</h2>
         <p>and I study at Goldsmiths University</p>
+        <p>This was last updated 08/10/2025<p>
     </body>
     </html>
 `
