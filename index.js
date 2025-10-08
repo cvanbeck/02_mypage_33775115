@@ -1,22 +1,8 @@
-var http = require("http");
-const port = 8000;
+var http = require("http"),
+    fs = require("fs");
 
-content = `
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
-        <h1>My first name is Charlie</h1>
-        <h2>My second name is van Beck</h2>
-        <p>and I study at Goldsmiths University</p>
-        <p>This was last updated 08/10/2025<p>
-    </body>
-    </html>
-`
+const port = 8000;
+const content = fs.readFileSync("index.html")
 
 http.createServer(function(req, res) {
     res.writeHead(200, { "Content-Type": "text/html"});
